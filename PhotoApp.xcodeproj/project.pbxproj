@@ -44,6 +44,10 @@
 		D5AD0AAF27DF27A1008146A8 /* XIBBasedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AD0AAD27DF27A1008146A8 /* XIBBasedViewController.xib */; };
 		D5AD0AB127DF284A008146A8 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0AB027DF284A008146A8 /* HomePageViewController.swift */; };
 		D5AD0AB327DF289C008146A8 /* HomePageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0AB227DF289C008146A8 /* HomePageViewControllerTests.swift */; };
+		D5AD0AB627DF2AC7008146A8 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0AB527DF2AC7008146A8 /* FormModel.swift */; };
+		D5AD0AB827DF2AF9008146A8 /* FormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0AB727DF2AF9008146A8 /* FormModelValidator.swift */; };
+		D5AD0ABA27DF2BB0008146A8 /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0AB927DF2BB0008146A8 /* FormError.swift */; };
+		D5AD0ABD27DF2C2F008146A8 /* FormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0ABC27DF2C2F008146A8 /* FormValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,10 @@
 		D5AD0AAD27DF27A1008146A8 /* XIBBasedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBBasedViewController.xib; sourceTree = "<group>"; };
 		D5AD0AB027DF284A008146A8 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		D5AD0AB227DF289C008146A8 /* HomePageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewControllerTests.swift; sourceTree = "<group>"; };
+		D5AD0AB527DF2AC7008146A8 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		D5AD0AB727DF2AF9008146A8 /* FormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModelValidator.swift; sourceTree = "<group>"; };
+		D5AD0AB927DF2BB0008146A8 /* FormError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormError.swift; sourceTree = "<group>"; };
+		D5AD0ABC27DF2C2F008146A8 /* FormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,7 @@
 			children = (
 				D58F817A278C1C7A00646633 /* Signup */,
 				D5AD0AA127DF2525008146A8 /* LoadingViewControllerInUnitTests */,
+				D5AD0AB427DF2A93008146A8 /* XCTAssertThrow */,
 				D50AE62D2783040A00EFDA30 /* AppDelegate.swift */,
 				D50AE62F2783040A00EFDA30 /* SceneDelegate.swift */,
 				D50AE6332783040A00EFDA30 /* Main.storyboard */,
@@ -174,6 +183,7 @@
 			children = (
 				D58F817E278C1D1900646633 /* Signup */,
 				D5AD0AA627DF2596008146A8 /* LoadingViewControllerInUnitTests */,
+				D5AD0ABB27DF2C05008146A8 /* XCTAssertThrow */,
 				D50AE6442783040E00EFDA30 /* PhotoAppTests.swift */,
 				D50AE6462783040E00EFDA30 /* Info.plist */,
 			);
@@ -327,6 +337,24 @@
 			path = LoadingViewControllerInUnitTests;
 			sourceTree = "<group>";
 		};
+		D5AD0AB427DF2A93008146A8 /* XCTAssertThrow */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD0AB527DF2AC7008146A8 /* FormModel.swift */,
+				D5AD0AB727DF2AF9008146A8 /* FormModelValidator.swift */,
+				D5AD0AB927DF2BB0008146A8 /* FormError.swift */,
+			);
+			path = XCTAssertThrow;
+			sourceTree = "<group>";
+		};
+		D5AD0ABB27DF2C05008146A8 /* XCTAssertThrow */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD0ABC27DF2C2F008146A8 /* FormValidatorTests.swift */,
+			);
+			path = XCTAssertThrow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,12 +490,15 @@
 				D56C89F627D89C6F003D7241 /* SignupPresenterProtocol.swift in Sources */,
 				D57EE32D2799B9C300D086B5 /* SignupPresenter.swift in Sources */,
 				D5AD0AB127DF284A008146A8 /* HomePageViewController.swift in Sources */,
+				D5AD0AB627DF2AC7008146A8 /* FormModel.swift in Sources */,
+				D5AD0ABA27DF2BB0008146A8 /* FormError.swift in Sources */,
 				D50AE62E2783040A00EFDA30 /* AppDelegate.swift in Sources */,
 				D57EE32B2799B8B600D086B5 /* SignupFormModel.swift in Sources */,
 				D58F8177278C1B5F00646633 /* SignupResponseModel.swift in Sources */,
 				D50AE6602783062A00EFDA30 /* SignupFormModelValidator.swift in Sources */,
 				D59DBA1427A0249B0001D775 /* SignupViewDelegateProtocol.swift in Sources */,
 				D58F8179278C1C0200646633 /* SignupError.swift in Sources */,
+				D5AD0AB827DF2AF9008146A8 /* FormModelValidator.swift in Sources */,
 				D50AE67A2784314000EFDA30 /* SignupConstants.swift in Sources */,
 				D5AD0AAE27DF27A1008146A8 /* XIBBasedViewController.swift in Sources */,
 				D56C89F227D88DB5003D7241 /* SignupViewController.swift in Sources */,
@@ -492,6 +523,7 @@
 				D50AE6452783040E00EFDA30 /* PhotoAppTests.swift in Sources */,
 				D5AD0AAB27DF2777008146A8 /* LoadingViewControllerWithXIBTests.swift in Sources */,
 				D56C89EE27D88C29003D7241 /* SignupViewControllerTests.swift in Sources */,
+				D5AD0ABD27DF2C2F008146A8 /* FormValidatorTests.swift in Sources */,
 				D56C89F427D89BF5003D7241 /* MockSignupPresenter.swift in Sources */,
 				D59DBA1227A023E70001D775 /* MockSignupViewDelegate.swift in Sources */,
 				D57EE3292799B7E900D086B5 /* SignupPresenterTests.swift in Sources */,
