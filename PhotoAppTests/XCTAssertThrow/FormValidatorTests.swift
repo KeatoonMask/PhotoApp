@@ -24,9 +24,46 @@ class FormValidatorTests: XCTestCase {
 
         // Act and Assert
         XCTAssertThrowsError(try sut.isFirstNameValid(firstName: "Finsi*"),
-                             "The should isFirstNameValid() method has thrown an error.") { error in
+                             "The isFirstNameValid() method should has thrown an error.") { error in
             XCTAssertEqual(error as? FormError, FormError.illigalCharacterFound)
         }
     }
 
+    func testFirstNameValidation_WhenInvalidCharactersProvided_ThrowsAnError_UsingTryCatch() {
+        // Arrange
+        let sut = FormModelValidator()
+
+        // Act and Assert
+        do {
+            let _ = try sut.isFirstNameValid(firstName: "Finsi*")
+            XCTFail("The isFirstNameValid() method should has thrown an error.")
+        } catch FormError.illigalCharacterFound {
+            // Success
+            return
+        } catch {
+            XCTFail("The isFirstNameValid() method should has thrown an illigalCharacterFound error.")
+            return
+        }
+    }
+
+    func testFirstNameValidation_WhenValidCharactersProvided_ThrowsNoError() {
+        // Arrange
+        let sut = FormModelValidator()
+
+        // Act and Assert
+        XCTAssertNoThrow(try sut.isFirstNameValid(firstName: "Finsi"), "The isFirstNameValid() method shouldn't has thrown an error.")
+    }
+
+    func testFirstNameValidation_WhenValidCharactersProvided_ThrowsNoError_UsingTryCatch() {
+        // Arrange
+        let sut = FormModelValidator()
+
+        // Act and Assert
+        do {
+            let _ = try sut.isFirstNameValid(firstName: "Finsi")
+        } catch {
+            XCTFail("he isFirstNameValid() method shouldn't has thrown an error.")
+            return
+        }
+    }
 }
