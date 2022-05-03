@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F86849E2821A2B2003CB545 /* TextFieldViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F86849D2821A2B2003CB545 /* TextFieldViewController.storyboard */; };
+		9F8684A22821A613003CB545 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8684A12821A613003CB545 /* TextFieldViewController.swift */; };
+		9F8684A52821A94C003CB545 /* TestingUITextFieldPropertiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8684A42821A94C003CB545 /* TestingUITextFieldPropertiesTests.swift */; };
 		D50AE62E2783040A00EFDA30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AE62D2783040A00EFDA30 /* AppDelegate.swift */; };
 		D50AE6302783040A00EFDA30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AE62F2783040A00EFDA30 /* SceneDelegate.swift */; };
 		D50AE6352783040A00EFDA30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50AE6332783040A00EFDA30 /* Main.storyboard */; };
@@ -68,6 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F86849D2821A2B2003CB545 /* TextFieldViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextFieldViewController.storyboard; sourceTree = "<group>"; };
+		9F8684A12821A613003CB545 /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		9F8684A42821A94C003CB545 /* TestingUITextFieldPropertiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingUITextFieldPropertiesTests.swift; sourceTree = "<group>"; };
 		D50AE62A2783040A00EFDA30 /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50AE62D2783040A00EFDA30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D50AE62F2783040A00EFDA30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +148,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F86849C2821A20A003CB545 /* TestingUITextFieldProperties */ = {
+			isa = PBXGroup;
+			children = (
+				9F86849D2821A2B2003CB545 /* TextFieldViewController.storyboard */,
+				9F8684A12821A613003CB545 /* TextFieldViewController.swift */,
+			);
+			path = TestingUITextFieldProperties;
+			sourceTree = "<group>";
+		};
+		9F8684A32821A905003CB545 /* TestingUITextFieldProperties */ = {
+			isa = PBXGroup;
+			children = (
+				9F8684A42821A94C003CB545 /* TestingUITextFieldPropertiesTests.swift */,
+			);
+			path = TestingUITextFieldProperties;
+			sourceTree = "<group>";
+		};
 		D50AE6212783040A00EFDA30 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +191,7 @@
 				D58F817A278C1C7A00646633 /* Signup */,
 				D5AD0AA127DF2525008146A8 /* LoadingViewControllerInUnitTests */,
 				D5AD0AB427DF2A93008146A8 /* XCTAssertThrow */,
+				9F86849C2821A20A003CB545 /* TestingUITextFieldProperties */,
 				D50AE62D2783040A00EFDA30 /* AppDelegate.swift */,
 				D50AE62F2783040A00EFDA30 /* SceneDelegate.swift */,
 				D50AE6332783040A00EFDA30 /* Main.storyboard */,
@@ -181,6 +205,7 @@
 		D50AE6432783040E00EFDA30 /* PhotoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				9F8684A32821A905003CB545 /* TestingUITextFieldProperties */,
 				D58F817E278C1D1900646633 /* Signup */,
 				D5AD0AA627DF2596008146A8 /* LoadingViewControllerInUnitTests */,
 				D5AD0ABB27DF2C05008146A8 /* XCTAssertThrow */,
@@ -461,6 +486,7 @@
 				D50AE63A2783040D00EFDA30 /* LaunchScreen.storyboard in Resources */,
 				D5AD0AAF27DF27A1008146A8 /* XIBBasedViewController.xib in Resources */,
 				D50AE6372783040D00EFDA30 /* Assets.xcassets in Resources */,
+				9F86849E2821A2B2003CB545 /* TextFieldViewController.storyboard in Resources */,
 				D50AE6352783040A00EFDA30 /* Main.storyboard in Resources */,
 				D5AD0AA527DF2570008146A8 /* ViewController.storyboard in Resources */,
 			);
@@ -505,6 +531,7 @@
 				D57EE3312799BCE500D086B5 /* SignupModelValidatorProtocol.swift in Sources */,
 				D58F8175278C19BC00646633 /* SignupFormRequestModel.swift in Sources */,
 				D59DBA1027A01C290001D775 /* SignupWebServiceProtocol.swift in Sources */,
+				9F8684A22821A613003CB545 /* TextFieldViewController.swift in Sources */,
 				D58F8173278C18B200646633 /* SignupWebService.swift in Sources */,
 				D5AD0AA327DF2553008146A8 /* ViewController.swift in Sources */,
 				D50AE6302783040A00EFDA30 /* SceneDelegate.swift in Sources */,
@@ -520,6 +547,7 @@
 				D59DBA0E27A01A610001D775 /* MockSignupWebService.swift in Sources */,
 				D50AE65E278304B600EFDA30 /* SignupFormModelValidatorTests.swift in Sources */,
 				D57EE32F2799BB3F00D086B5 /* MockSignupModelValidator.swift in Sources */,
+				9F8684A52821A94C003CB545 /* TestingUITextFieldPropertiesTests.swift in Sources */,
 				D50AE6452783040E00EFDA30 /* PhotoAppTests.swift in Sources */,
 				D5AD0AAB27DF2777008146A8 /* LoadingViewControllerWithXIBTests.swift in Sources */,
 				D56C89EE27D88C29003D7241 /* SignupViewControllerTests.swift in Sources */,
