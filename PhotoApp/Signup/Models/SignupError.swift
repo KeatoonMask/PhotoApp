@@ -11,4 +11,5 @@ enum SignupError: Error {
     case responseModelParsing
     case invalidRequestURLString
     case failedRequest
+    case passwordsNotMatch
 }

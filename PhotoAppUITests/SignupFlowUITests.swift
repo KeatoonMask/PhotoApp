@@ -26,26 +26,54 @@ class SignupFlowUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+ 
+        let firstName = app.textFields["firstNameTextField"]
+        let lastName = app.textFields["lastNameTextField"]
+        let email = app.textFields["emailTextField"]
+        let password = app.secureTextFields["passwordTextField"]
+        let repeatePassword = app.secureTextFields["repeatPasswordTextField"]
+        let signupButton = app.buttons["signupButton"]
         
+        XCTAssertTrue(firstName.isEnabled, "First Name UITextField is not enabled for user interactions")
+        XCTAssertTrue(lastName.isEnabled, "Last Name UITextField is not enabled for user interactions")
+        XCTAssertTrue(email.isEnabled, "Email UITextField is not enabled for user interactions")
+        XCTAssertTrue(password.isEnabled, "Password UITextField is not enabled for user interactions")
+        XCTAssertTrue(repeatePassword.isEnabled, "Repeat Password UITextField is not enabled for user interactions")
+        XCTAssertTrue(signupButton.isEnabled, "Signup button is not enabled for user interactions")
+    }
+    
+    func testViewController_WhenInvalidadFormSubmitted_PresentsErrorAlertDialog() {
+        // Arrage
+        let app = XCUIApplication()
+        app.launch()
         
-//        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
-//        element.children(matching: .textField).element(boundBy: 1).tap()
-//        element.children(matching: .textField).element(boundBy: 2).tap()
-//        element.children(matching: .textField).element(boundBy: 3).tap()
-//        element.children(matching: .textField).element(boundBy: 4).tap()
-//        app/*@START_MENU_TOKEN@*/.staticTexts["Signup"]/*[[".buttons[\"Signup\"].staticTexts[\"Signup\"]",".staticTexts[\"Signup\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let firstName = app.textFields["firstNameTextField"]
+        firstName.tap()
+        firstName.typeText("Finsi")
+            
+        let lastName = app.textFields["lastNameTextField"]
+        lastName.tap()
+        lastName.typeText("Ennes")
         
-           
-        app.textFields["First Name"].tap()
-        app.textFields["Last Name"].tap()
-        app.textFields["Email"].tap()
-        app.textFields["Password"].tap()
-        app.textFields["Repeat password"].tap()
-        app.buttons["Signup"].tap()
+        let email = app.textFields["emailTextField"]
+        email.tap()
+        email.typeText("finsi@gmail.com")
         
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let password = app.secureTextFields["passwordTextField"]
+        password.tap()
+        password.typeText("1234abcd")
+        
+        let repeatePassword = app.secureTextFields["repeatPasswordTextField"]
+        repeatePassword.tap()
+        repeatePassword.typeText("123")
+        
+        let signupButton = app.buttons["signupButton"]
+        
+        // Act
+        signupButton.tap()
+        
+        // Assert
+        XCTAssertTrue(app.alerts["errorAlertDialog"].waitForExistence(timeout: 1))
     }
 
     func testLaunchPerformance() throws {

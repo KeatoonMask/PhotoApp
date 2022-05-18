@@ -39,6 +39,7 @@ class SignupPresenter: SignupPresenterProtocol {
         }
 
         if !formModelValidator.doPasswordMatch(password: formModel.password, repeatPassword: formModel.repeatPassword) {
+            self.delegate?.errorHandler(error: SignupError.passwordsNotMatch)
             return
         }
 
