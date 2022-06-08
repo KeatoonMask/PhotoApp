@@ -78,9 +78,7 @@ class SignupFlowUITests: XCTestCase {
         
         repeatPassword.tap()
         repeatPassword.typeText("123")
-        
-        let signupButton = app.buttons["signupButton"]
-        
+                
         // Act
         signupButton.tap()
         
@@ -104,9 +102,7 @@ class SignupFlowUITests: XCTestCase {
         
         repeatPassword.tap()
         repeatPassword.typeText("1234abcd")
-        
-        let signupButton = app.buttons["signupButton"]
-        
+                
         // Act
         signupButton.tap()
         
